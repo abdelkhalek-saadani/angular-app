@@ -1,0 +1,36 @@
+/* Boostrap */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: Roboto, Helvetica, sans-serif;
+  }
+
+body {
+  padding : 0px;
+  margin : 0px; 
+}
+header {
+  text-align: center;
+  background-color: #EEE;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+button {
+  background-color: transparent;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  border: none;
+  box-shadow: lightgray 3px 3px 7px;
+  margin-right: 20px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  &:active {
+    transform: translate(1px, 1px);
+    box-shadow: lightgray 0 0 5px;
+  }
+}

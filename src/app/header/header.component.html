@@ -1,0 +1,8 @@
+<header>
+    <h1>{{"My App" | uppercase }}</h1>
+    <nav>
+        <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+        <a routerLink="/facesnaps" (click)= "navigateToFaceSnaps()" routerLinkActive="active" >Face Snaps</a>
+      
+      </nav>
+</header>

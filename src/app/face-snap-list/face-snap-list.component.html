@@ -1,0 +1,3 @@
+<ng-container *ngFor="let mySnap of mySnaps">
+    <app-face-snap [faceSnap]="mySnap" *ngIf="mySnap.snaps >5"></app-face-snap>
+</ng-container>

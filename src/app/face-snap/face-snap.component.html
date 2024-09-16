@@ -1,0 +1,15 @@
+<div class="face-snap-card" [ngClass]="{ 'snapped': isSnapped == true }">
+
+    <p>Face Snap works!</p>
+    <button (click)="onViewFaceSnap()">VIEW</button>
+    
+    <h2>{{faceSnap.title | lowercase}}</h2>
+    <p>{{faceSnap.createdDate | date: 'à HH:mm, le d MMMM yyyy' }}</p>
+    
+    
+    <!-- <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title" /> -->
+    
+
+
+</div>
+

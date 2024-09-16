@@ -1,0 +1,75 @@
+<div class="face-snap-card" [ngClass]="{ snapped: isSnapped == true }">
+  <p>Face Snap works!</p>
+  <a routerLink="/facesnaps">Back</a>
+  <h2>Pipes</h2>
+  <div class="pl-2">
+    <p>
+      <b>{{'{{ 9999.99 | number }}'}} =></b> {{ 9999.99 | number }}
+    </p>
+    <p>
+      <b>{{'{{ 9999.85 | number : "5.0-1" }}'}} =></b>
+      {{ 9999.85 | number : "5.0-1" }}
+    </p>
+    <p>
+      <b>{{'{{ 0.56485 | percent : "1.0-1" }}'}} =></b>
+      {{ 0.56485 | percent : "1.0-1" }}
+    </p>
+
+    <p>
+      <b>{{'{{ 344.36 | currency : " FLOUS " : "code" }}'}} =></b>
+      {{ 344.36 | currency : " FLOUS " : "code" }}
+    </p>
+
+    <p>
+      <b>{{'{{ faceSnap.title | uppercase }}'}} :</b>
+      {{ faceSnap.title }} <b>=></b>
+      {{ faceSnap.title | uppercase }}
+    </p>
+    <p>
+      <b>{{'{{ faceSnap.title | lowercase }}'}} =></b>
+      {{ faceSnap.title | lowercase }}
+    </p>
+    <p>
+      <b>{{'{{ faceSnap.description | titlecase }}'}} =></b>
+      {{ faceSnap.description | titlecase }}
+    </p>
+    <p>
+      <b>{{'{{ faceSnap.createdDate | date }}'}} :</b> <br />
+      {{ faceSnap.createdDate }} <b>=></b>
+      {{ faceSnap.createdDate | date }}
+    </p>
+    <p>
+      <b>{{'{{ faceSnap.createdDate | date : "longDate" }}'}} =></b>
+      {{ faceSnap.createdDate | date : "longDate" }}
+    </p>
+    <p>
+      <b>{{'{{ faceSnap.createdDate | date : "dd/MM/yy, à HH:mm" }}'}} =></b>
+      {{ faceSnap.createdDate | date : "dd/MM/yy, à HH:mm" }}
+    </p>
+    <p>
+      <b
+        >{{'{{ faceSnap.createdDate | date : "à HH:mm, le d MMMM yyyy" }}'}}
+        =></b
+      >
+      {{ faceSnap.createdDate | date : "à HH:mm, le d MMMM yyyy" }}
+    </p>
+  </div>
+  <p>
+    <button (click)="onAddSnap()">{{ buttonLabel }}</button>
+    <span [ngStyle]="{ color: 'rgb(0, ' + faceSnap.snaps * 10 + ', 0)' }"
+      >🤑{{ faceSnap.snaps }}
+    </span>
+  </p>
+  <div class="p-2">
+    <b
+      >Using interpolation: {{'\<img src="{{ faceSnap.imageUrl }}" alt="{{ faceSnap.title }}" />'}}
+    </b>
+    <img src="{{ faceSnap.imageUrl }}" alt="{{ faceSnap.title }}" />
+  </div>
+  <div class="p-2">
+    <b>Using property binding: {{'\<img [src]="faceSnap.imageUrl" [alt]="faceSnap.title" />'}}</b>
+    <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title" />
+  </div>
+  <p *ngIf="faceSnap.location">{{ faceSnap.location }}</p>
+  <p *ngIf="!faceSnap.location">Somewhere...</p>
+</div>

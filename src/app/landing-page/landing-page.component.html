@@ -1,0 +1,9 @@
+<div class="landing-block">
+  <img src="assets/logo.png" alt="Snapface logo" />
+  <div class="landing-links">
+    <button (click)="onAbout()">About</button>
+    <button (click)="onContinue()">Show Posts</button>
+  </div>
+</div>
+<router-outlet name="postOutlet" #bottomSection></router-outlet>
+
