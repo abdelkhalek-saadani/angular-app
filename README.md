@@ -24,7 +24,7 @@ This project is an Angular application built while following a course on [Angula
 
 Clone the repository:
 ```
-git clone https://github.com/abdelkhalek-saadani/debutez-avec-angular-openclassroom.git
+git clone https://github.com/abdelkhalek-saadani/angular-app.git
 ```
 Navigate to the project folder:
 ```
