@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is an Angular application built while following a course on [https://openclassrooms.com/fr/courses/7471261-debutez-avec-angular](Angular fundamentals). It covers essential concepts such as components, data binding, event handling, directives, pipes, services, and routing. Additionally, extra components and functionalities have been added to enhance the project beyond the course material.
+This project is an Angular application built while following a course on [Angular Fundamentals](https://openclassrooms.com/fr/courses/7471261-debutez-avec-angular). It covers essential concepts such as components, data binding, event handling, directives, pipes, services, and routing. Additionally, extra components and functionalities have been added to enhance the project beyond the course material.
 
 ## Features
 
