@@ -5,12 +5,18 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SingleFaceSnapComponent } from './single-face-snap/single-face-snap.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { AboutComponent } from './about/about.component';
+import { PostComponent } from './post/post.component';
 
 const routes: Routes = [
   {
     path: '',
     component: LandingPageComponent,
     children: [
+      {
+        path: 'post/:id',
+        component: PostComponent,
+        outlet: 'postOutlet',
+      },
       {
         path: 'posts',
         component: PostListComponent,

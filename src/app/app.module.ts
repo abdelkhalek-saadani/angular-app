@@ -11,7 +11,8 @@ import { SingleFaceSnapComponent } from './single-face-snap/single-face-snap.com
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { PostListComponent } from './post-list/post-list.component';
 
-@NgModule({ declarations: [
+@NgModule({
+    declarations: [
         AppComponent,
         FaceSnapComponent,
         FaceSnapListComponent,
@@ -20,8 +21,13 @@ import { PostListComponent } from './post-list/post-list.component';
         SingleFaceSnapComponent,
         PostListComponent
     ],
-    bootstrap: [AppComponent], imports: [BrowserModule,
-        AppRoutingModule], providers: [
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule
+    ],
+    providers: [
         provideHttpClient(withInterceptorsFromDi())
-    ] })
+    ]
+})
 export class AppModule { }

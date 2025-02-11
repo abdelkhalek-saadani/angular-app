@@ -13,6 +13,8 @@
         ><i>{{ getDateDifference(post.date) }} ago</i></small
       >
       <p>{{ post.body }}</p>
+      <a (click)= "navigateToPost(post.id)" class="btn btn-primary"
+        >Read more</a>
     </div>
   </div>
   <div *ngIf="!(posts$ | async)?.length">

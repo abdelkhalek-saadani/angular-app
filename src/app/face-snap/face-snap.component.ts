@@ -4,9 +4,10 @@ import { FaceSnapsService } from '../services/face-snaps.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-face-snap',
-  templateUrl: './face-snap.component.html',
-  styleUrls: ['./face-snap.component.scss'],
+    selector: 'app-face-snap',
+    templateUrl: './face-snap.component.html',
+    styleUrls: ['./face-snap.component.scss'],
+    standalone: false
 })
 export class FaceSnapComponent implements OnInit {
   buttonLabel!: String;

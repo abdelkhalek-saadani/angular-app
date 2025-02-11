@@ -3,22 +3,24 @@ import { PostsService } from '../services/post.service';
 import { Post } from '../models/post.model';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-post-list',
-  templateUrl: './post-list.component.html',
-  styleUrls: ['./post-list.component.scss'],
+    selector: 'app-post-list',
+    templateUrl: './post-list.component.html',
+    styleUrls: ['./post-list.component.scss'],
+    standalone: false
 })
 export class PostListComponent implements OnInit {
   posts$!: Observable<Post[]>;
   searchTerm = '';
 
-  constructor(private postsService: PostsService) {
-    this.postsService.getPosts();
-  }
+  constructor(private postsService: PostsService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.posts$ = this.postsService.posts$
+    this.posts$ = this.postsService.getPosts();
   }
 
   getDateDifference(postDate: Date): string {
@@ -37,8 +39,13 @@ export class PostListComponent implements OnInit {
     else return 'seconds';
   }
 
+  navigateToPost(id : number){
+    console.log(id);
+    this.router.navigate([{ outlets: { postOutlet: ['post',id] } }]);
+  }
+  
   onSearchInputChange(searchTerm: string): void {
-    this.posts$ = this.postsService.posts$.pipe(
+    this.posts$ = this.postsService.getPosts().pipe(
       map((posts) =>
         posts.filter(
           (post) =>
