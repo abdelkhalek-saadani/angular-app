@@ -8,28 +8,20 @@ import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SingleFaceSnapComponent } from './single-face-snap/single-face-snap.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { PostListComponent } from './post-list/post-list.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    FaceSnapComponent,
-    FaceSnapListComponent,
-    HeaderComponent,
-    LandingPageComponent,
-    SingleFaceSnapComponent,
-    PostListComponent
-    
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
-  providers: [
-    
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        FaceSnapComponent,
+        FaceSnapListComponent,
+        HeaderComponent,
+        LandingPageComponent,
+        SingleFaceSnapComponent,
+        PostListComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule], providers: [
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule { }
