@@ -1,29 +1,52 @@
-# debutez-avec-angular-openclassroom
+# Angular Project
 
-## Snapface
+## Overview
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+This project is an Angular application built while following a course on [https://openclassrooms.com/fr/courses/7471261-debutez-avec-angular](Angular fundamentals). It covers essential concepts such as components, data binding, event handling, directives, pipes, services, and routing. Additionally, extra components and functionalities have been added to enhance the project beyond the course material.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Components: Modular and reusable UI components.
 
-## Code scaffolding
+- Data Binding: One-way and two-way data binding implementations.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Event Handling: Interactive components responding to user actions.
 
-## Build
+- Directives & Pipes: Structural directives and pipes for dynamic content.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Services: Centralized logic and dependency injection.
 
-## Running unit tests
+- Routing: Navigation between different views.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Extended Functionality: Additional features beyond the course scope.
 
-## Running end-to-end tests
+## Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Clone the repository:
+```
+git clone https://github.com/abdelkhalek-saadani/debutez-avec-angular-openclassroom.git
+```
+Navigate to the project folder:
+```
+cd angular-app
+```
+Install dependencies:
+```
+npm install
+```
+Run the development server:
+```
+ng serve
+```
+Open in a browser:
 
-## Further help
+`http://localhost:4200/`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Technologies Used
+
+- Angular
+
+- TypeScript
+
+- Bootstrap 
+
